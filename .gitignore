@@ -1,48 +1,98 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
-
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
+# WordPress core files
 /wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
 /wp-includes/
-/index.php
-/license.txt
-/readme.html
 /wp-*.php
 /xmlrpc.php
+/license.txt
+/readme.html
+/index.php
+/wp-content/index.php
+/wp-content/themes/index.php
+/wp-content/plugins/index.php
 
-# Configuration
+# WordPress config
 wp-config.php
 
-# Example themes
-/wp-content/themes/twenty*/
-
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
+# WordPress uploads and cache
 /wp-content/uploads/
+/wp-content/cache/
+/wp-content/upgrade/
+/wp-content/backup-db/
+/wp-content/backups/
+/wp-content/blogs.dir/
+/wp-content/upgrade/
+/wp-content/mu-plugins/
+/wp-content/wp-cache-config.php
+/wp-content/advanced-cache.php
+
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.yarn-integrity
+
+# Package files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment variables and config files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build files
+/dist/
+/build/
+/.cache/
+/out/
+/.next/
+
+# IDE specific files
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# OS specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
 # Log files
 *.log
+logs/
+npm-debug.log*
 
-# htaccess
-/.htaccess
+# Coverage directory used by tools like istanbul
+coverage/
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
+# Local development specific files
+.sass-cache/
+.eslintcache
+.stylelintcache
+.phpunit.result.cache
 
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+
+# Backup files
+*.bak
+*.backup
+*~
