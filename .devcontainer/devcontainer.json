@@ -2,7 +2,7 @@
   "name": "WordPress Development with Node.js",
   "dockerComposeFile": "docker-compose.yml",
   "service": "wordpress",
-  "workspaceFolder": "/var/www/html",
+  "workspaceFolder": "/workspace",
   "forwardPorts": [8080, 3306, 8081],
   "portsAttributes": {
     "8080": {
