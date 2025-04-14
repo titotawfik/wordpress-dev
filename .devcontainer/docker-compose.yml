@@ -8,7 +8,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - wordpress:/var/www/html
+      - .:/var/www/html  # Mount the current directory (repo) into /var/www/html
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: wordpress
@@ -46,5 +46,4 @@ services:
       - db
 
 volumes:
-  wordpress:
   db_data:
