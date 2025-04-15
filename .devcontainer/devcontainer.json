@@ -18,22 +18,26 @@
       "onAutoForward": "notify"
     }
   },
-  "extensions": [
-    "felixfbecker.php-debug",
-    "bmewburn.vscode-intelephense-client",
-    "mrmlnc.vscode-apache",
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "ms-azuretools.vscode-docker",
-    "wesbos.theme-cobalt2",
-    "dracula-theme.theme-dracula",
-    "github.github-vscode-theme"
-  ],
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash",
-    "workbench.colorTheme": "GitHub Dark Default",
-    "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-    "window.autoDetectColorScheme": true
+  "customizations": {
+		"vscode": {
+      "extensions": [
+        "felixfbecker.php-debug",
+        "bmewburn.vscode-intelephense-client",
+        "mrmlnc.vscode-apache",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "wesbos.theme-cobalt2",
+        "dracula-theme.theme-dracula",
+        "github.github-vscode-theme"
+      ],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "workbench.colorTheme": "GitHub Dark Default",
+        "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+        "window.autoDetectColorScheme": true
+      }
+    }
   },
   "postCreateCommand": "sudo apt-get update && sudo apt-get install -y less && node --version && npm --version"
 }
