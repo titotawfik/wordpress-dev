@@ -21,6 +21,7 @@ wp-config.php
 .devcontainer/wp-content/uploads/
 .devcontainer/wp-content/cache/
 .devcontainer/wp-content/upgrade/
+.devcontainer/wp-content/upgrade-temp-backup/
 .devcontainer/wp-content/backup-db/
 .devcontainer/wp-content/backups/
 .devcontainer/wp-content/blogs.dir/
@@ -38,7 +39,7 @@ wp-content/upgrade/
 wp-content/backup-db/
 wp-content/backups/
 wp-content/blogs.dir/
-wp-content/upgrade/
+wp-content/upgrade-temp-backup/
 wp-content/mu-plugins/
 wp-content/wp-cache-config.php
 wp-content/advanced-cache.php
