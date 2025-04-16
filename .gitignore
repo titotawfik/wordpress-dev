@@ -9,6 +9,8 @@ index.php
 wp-content/index.php
 wp-content/themes/index.php
 wp-content/plugins/index.php
+# EXCEPTION: track this specific index for our theme only.
+!.devcontainer/wp-content/themes/theclinicapp/index.php
 
 # WordPress config
 wp-config.php
@@ -25,7 +27,6 @@ wp-config.php
 .devcontainer/wp-content/backup-db/
 .devcontainer/wp-content/backups/
 .devcontainer/wp-content/blogs.dir/
-.devcontainer/wp-content/mu-plugins/
 .devcontainerwp-content/wp-cache-config.php
 .devcontainer/wp-content/advanced-cache.php
 
@@ -40,7 +41,6 @@ wp-content/backup-db/
 wp-content/backups/
 wp-content/blogs.dir/
 wp-content/upgrade-temp-backup/
-wp-content/mu-plugins/
 wp-content/wp-cache-config.php
 wp-content/advanced-cache.php
 

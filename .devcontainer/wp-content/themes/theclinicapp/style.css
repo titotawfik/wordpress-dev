@@ -1,0 +1,26 @@
+/*
+    Theme Name: TheClinicApp
+    Theme URI: https://animocdn.co/TCA/git/
+    Author: Tito Bakr
+    Description: A custom WordPress theme for TheClinicApp.
+    Version: 1.0
+    License: GPL2
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Text Domain: theclinicapp-theme
+    */
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .btn.toggle-mob,  .btn.toggle-mob:hover {
+        border-color:black;
+    }
+    .offcanvas-header {
+        position: relative;
+    }
+    .offcanvas-header .btn-close {
+        bottom: -20px;
+        position: absolute;
+        right: 20px;
+    }
