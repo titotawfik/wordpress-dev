@@ -144,7 +144,7 @@ get_header();
         <div class="row align-items-center">
             <!-- Content Section -->
             <div class="col-lg-6 fade-in delay-5 order-lg-2">
-                <h2 class="fw-bold mb-3">Intelligent Appointment Management</h2>
+                <h3 class="fw-bold mb-3">Intelligent Appointment Management</h3>
                 <p class="lead text-secondary mb-4 pe-lg-3">
                     Streamline your scheduling process with smart booking, automated reminders, and conflict prevention.
                 </p>

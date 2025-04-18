@@ -1,3 +1,13 @@
+// Menu -- add bs classes to wp menu
+const navItems = document.querySelectorAll('.nav > li');
+navItems.forEach(navitem => {
+  navitem.classList.add('nav-item');
+});
+const navLinks = document.querySelectorAll('.nav > li > a');
+navLinks.forEach(link => {
+  link.classList.add('nav-link');
+});
+
 // animate when content come into view
 document.addEventListener("DOMContentLoaded", function () {
     const fadeElements = document.querySelectorAll(".fade-on-scroll");

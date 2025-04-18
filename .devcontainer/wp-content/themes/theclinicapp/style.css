@@ -53,12 +53,13 @@ h1{
 .bg-grey-900 {
     background-color: var(--grey-900);
 }
-.nav-link{
+.nav-link {
     color: var(--grey-600);
 }
 .nav-link:hover {
     color: var(--bs-primary);
 }
+
 .btn{
     font-size: .825rem;
     padding-top: .7rem;
