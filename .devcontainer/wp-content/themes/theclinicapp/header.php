@@ -4,7 +4,7 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?php wp_title('|', true, 'right'); ?></title>
+  <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
   <?php wp_head(); ?>
 </head>
 
@@ -15,7 +15,7 @@
     <div class="container d-flex align-items-center justify-content-between">
       <!-- Logo (Text) -->
       <a href="<?php echo home_url(); ?>" class="navbar-brand d-flex align-items-center text-decoration-none">
-        <span class="site-title fs-5 fw-bold">TheClinicApp</span>
+        <span class="site-title fs-5 fw-bold"><?php bloginfo('name'); ?></span>
       </a>
 
       <!-- Nav Menu -->
