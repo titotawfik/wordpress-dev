@@ -10,7 +10,7 @@ get_header(); ?>
   <?php get_template_part('partials/features-first'); ?>
   <?php get_template_part('partials/features-second'); ?>
   <?php get_template_part('partials/form-section'); ?>
-  <?php get_template_part('partials/faq-section'); ?>
+  <?php if (get_field('faq')) {get_template_part('partials/faq-section');} ?>
 </main>
 
 <?php get_footer(); ?>
