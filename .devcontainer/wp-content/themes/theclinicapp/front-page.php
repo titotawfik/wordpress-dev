@@ -9,6 +9,8 @@ get_header(); ?>
   <?php get_template_part('partials/hero'); ?>
   <?php get_template_part('partials/features-first'); ?>
   <?php get_template_part('partials/features-second'); ?>
+  <?php get_template_part('partials/features-third'); ?>
+  <?php get_template_part('partials/features-forth'); ?>
   <?php get_template_part('partials/form-section'); ?>
   <?php if (get_field('faq')) {get_template_part('partials/faq-section');} ?>
 </main>

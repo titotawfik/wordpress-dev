@@ -54,6 +54,9 @@ h1 {
 .bg-grey-900 {
   background-color: var(--grey-900);
 }
+.bg-teal--gradient {
+  background: linear-gradient(to bottom right in oklab, #effafc 0%, #ffffff 100%);
+}
 .nav-link {
   color: var(--grey-600);
 }
@@ -283,6 +286,9 @@ body.dark-theme .card {
 body.dark-theme .appointment-section {
   background-color: var(--dark-blue-950);
 }
+body.dark-theme .bg-teal--gradient {
+  background: linear-gradient(to right, #141937 0%, #141937 100%);
+}
 body.dark-theme .form-card {
   background-color: var(--slate-900);
   color: var(--slate-300);
@@ -291,14 +297,16 @@ body.dark-theme .form-card {
 body.dark-theme .form-card h4 {
   color: white;
 }
-body.dark-theme .form-control {
+body.dark-theme .wpforms-form input {
   background-color: var(--slate-800);
   color: white;
   border-color: var(--slate-700);
 }
-body.dark-theme .form-control::placeholder {
+body.dark-theme .wpforms-form input::placeholder {
   color: var(--slate-300);
 }
+
+
 /* Form Section */
 .form-section {
   background: #0f172b;

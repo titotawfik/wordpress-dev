@@ -13,7 +13,7 @@ if ($secondary_feature):
                     <h3 class="fw-bold mb-3"><?php echo esc_html($secondary_feature['heading']); ?></h3>
                 <?php endif; ?>
                 <?php if(!empty($secondary_feature['description'])): ?>
-                <p class="lead text-secondary mb-4 pe-lg-3"><?php echo esc_html($secondary_feature['description']); ?></p>
+                <p class="lead text-secondary mb-4 col-lg-9"><?php echo esc_html($secondary_feature['description']); ?></p>
                 <?php endif; ?>
                 
                 <?php if (!empty($secondary_feature['feature_title_1'])): ?>
@@ -56,7 +56,7 @@ if ($secondary_feature):
             <?php if (!empty($secondary_feature['video_url'])): ?>
             <!-- Video Section -->
             <div class="col-lg-6 mb-4 fade-in delay-5">
-                <div class="video-container">
+                <div class="video-container pe-lg-4">
                     <div class="ratio ratio-16x9 shadow-lg">
                         <iframe src="<?php echo esc_url($secondary_feature['video_url']); ?>" title="<?php echo esc_html($secondary_feature['video_title']); ?>" allowfullscreen></iframe>
                     </div>
