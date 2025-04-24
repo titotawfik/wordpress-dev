@@ -19,45 +19,6 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_6802dae492db9",
-                    "label": "Video URL",
-                    "name": "video_url",
-                    "aria-label": "",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "https:\/\/www.youtube.com\/embed\/zpOULjyy-n8?rel=0",
-                    "allow_in_bindings": 0,
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_6803cbe0f3c6b",
-                    "label": "Video Title",
-                    "name": "video_title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Video Title",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
                     "key": "field_6803cbfef3c6c",
                     "label": "Heading",
                     "name": "heading",
@@ -224,6 +185,27 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_680ab65ad9efc",
+                    "label": "Media File",
+                    "name": "media_file",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 }
             ]
         }
@@ -246,5 +228,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745079859
+    "modified": 1745532294
 }

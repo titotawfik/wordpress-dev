@@ -139,45 +139,6 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_6802e7248c51c",
-                    "label": "Video URL",
-                    "name": "video_url",
-                    "aria-label": "",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Video URL",
-                    "allow_in_bindings": 0,
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_6802e7508c51d",
-                    "label": "Video Title",
-                    "name": "video_title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Video Title",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
                     "key": "field_6802e7768c51e",
                     "label": "Trust Badge Text",
                     "name": "trust_badge_text",
@@ -197,6 +158,27 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_680a95c8fffc2",
+                    "label": "Media File",
+                    "name": "media_file",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Upload your media file",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 }
             ]
         }
@@ -219,5 +201,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745022426
+    "modified": 1745532172
 }

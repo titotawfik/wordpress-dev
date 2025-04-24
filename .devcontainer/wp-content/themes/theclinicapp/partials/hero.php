@@ -1,6 +1,7 @@
 <?php
 // Get hero group field
 $hero = get_field('hero'); // 'hero' is the group field name
+$media = extract_first_media_with_type($hero['media_file']);
 if ($hero):
 ?>
     <!-- Hero Section -->
@@ -8,11 +9,21 @@ if ($hero):
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 mb-4 order-lg-2 fade-in delay-2">
-                    <?php if (!empty($hero['video_url'])): ?>
-                        <div class="ratio ratio-16x9 shadow-lg">
-                            <iframe src="<?php echo esc_url($hero['video_url']); ?>" title="<?php echo esc_html($hero['video_title']); ?>" allowfullscreen></iframe>
-                        </div>
-                    <?php endif; ?>
+
+                    <?php
+                    if (!empty($media['html'])) {
+
+                        if ($media['type'] === 'iframe') {
+                            echo '<div class="media-wrapper iframe-embed ratio ratio-16x9 shadow-lg">';
+                        } else {
+                            echo '<div class="media-wrapper shadow-lg">';
+                        }
+                        echo $media['html'];
+                        echo '</div>';
+                    }
+
+                    ?>
+
                     <?php if (!empty($hero['trust_badge_text'])): ?>
                         <div class="text-center mt-1">
                             <p class="py-3 badge bg-dark"><?php echo esc_html($hero['trust_badge_text']); ?></p>
