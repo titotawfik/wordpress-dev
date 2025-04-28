@@ -415,3 +415,10 @@ label {
   color: var(--grey-400);
   text-decoration: none;
 }
+/* If the dropdown on hover instead on click */
+/* remove the gap so it doesn't close */
+/* .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+} 
+*/
