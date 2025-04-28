@@ -20,13 +20,14 @@
 
       <!-- Nav Menu -->
       <nav class="d-none d-md-block">
-      <?php
+        <?php
         wp_nav_menu(array(
-            'theme_location' => 'header-menu',  // Change to your menu location
-            'container'      => false,           // No container div
-            'menu_class'     => 'nav'          // Class for ul
+          'theme_location' => 'header-menu',  // Change to your menu location
+          'container'      => false,           // No container div
+          'menu_class'     => 'nav',          // Class for ul
+          'walker' => new Bootstrap_Navwalker() // Use custom walker
         ));
-      ?>
+        ?>
       </nav>
       <div class="gap-2 d-sm-flex">
         <button class="border-0 switch-theme-btn" type="button" title="switch theme" id="theme-toggle"></button>
@@ -50,12 +51,13 @@
       </button>
     </div>
     <div class="offcanvas-body">
-    <?php
-        wp_nav_menu(array(
-            'theme_location' => 'header-menu',  // Change to your menu location
-            'container'      => false,           // No container div
-            'menu_class'     => 'nav flex-column' // Class for ul
-        ));
+      <?php
+      wp_nav_menu(array(
+        'theme_location' => 'header-menu',  // Change to your menu location
+        'container'      => false,           // No container div
+        'menu_class'     => 'nav flex-column', // Class for ul
+        'walker' => new Bootstrap_Navwalker() // Use custom walker
+      ));
       ?>
     </div>
   </div>

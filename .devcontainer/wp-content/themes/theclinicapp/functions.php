@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * The Clinic App Theme Functions
+ * 
+ * @package TheClinicApp
+ */
+require_once get_template_directory() . '/lib/class-bootstrap-navwalker.php';
+require_once get_template_directory() . '/lib/helpers.php';
+
 function theclinicapp_enqueue_assets()
 {
     // Styles
@@ -29,23 +38,3 @@ function register_site_menus()
     );
 }
 add_action('init', 'register_site_menus');
-
-function extract_first_media_with_type($content)
-{
-    //extract_first_media_with_type from WYSIWYG editor ACF fields
-    if (!$content) return ['type' => null, 'html' => ''];
-
-    if (preg_match('/<img[^>]+>/i', $content, $img_match)) {
-        return ['type' => 'image', 'html' => preg_replace('/(width|height)="\d*"/i', '', $img_match[0])];
-    }
-
-    if (preg_match('/<video[^>]*>.*?<\/video>/is', $content, $video_match)) {
-        return ['type' => 'video', 'html' => preg_replace('/(width|height)="\d*"/i', '', $video_match[0])];
-    }
-
-    if (preg_match('/<iframe[^>]+src=["\'].*?(youtube\.com|vimeo\.com)[^"\']*["\'][^>]*><\/iframe>/i', $content, $iframe_match)) {
-        return ['type' => 'iframe', 'html' => preg_replace('/(width|height)="\d*"/i', '', $iframe_match[0])];
-    }
-
-    return ['type' => null, 'html' => ''];
-}
