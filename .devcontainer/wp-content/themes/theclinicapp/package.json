@@ -1,0 +1,38 @@
+{
+  "name": "theclinicapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass -q --watch --style expanded --source-map ./src/scss/style.scss:./dist/css/style.css",
+    "js": "esbuild --watch ./src/js/main.js --outfile=./dist/js/main.js --bundle --sourcemap=true",
+    "scss-prod": "sass -q --style compressed ./src/scss/style.scss:./dist/css/style.css",
+    "js-prod": "esbuild ./src/js/main.js --outfile=./dist/js/main.js --minify --bundle",
+    "lint:scss": "stylelint \"./src/scss/**/*.scss\" --fix",
+    "lint:js": "eslint --ext .js,.jsx --fix ./src/js",
+    "lint": "npm run lint:scss && npm run lint:js",
+    "build": "npm run scss-prod && npm run js-prod",
+    "dev": "npm run scss && npm run js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "autoprefixer": "^10.4.21",
+    "bootstrap": "^5.3.5",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.87.0",
+    "stylelint": "^16.19.1",
+    "stylelint-config-twbs-bootstrap": "^16.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.3"
+  }
+}

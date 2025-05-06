@@ -1,3 +1,8 @@
+import Collapse from '../../node_modules/bootstrap/js/dist/collapse';
+import Dropdown from '../../node_modules/bootstrap/js/dist/dropdown';
+import Offcanvas from '../../node_modules/bootstrap/js/dist/offcanvas';    
+
+
 
 // animate when content come into view
 document.addEventListener("DOMContentLoaded", function () {
@@ -6,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+            entry.target.classList.add("visible"); 
           }
         });
       },
@@ -55,4 +60,3 @@ document.addEventListener("DOMContentLoaded", function () {
       themeToggle.innerHTML = '<i class="fa-regular fa-moon fa-xl"></i>';
     }
   }
-  
