@@ -26,6 +26,7 @@ wp-config.php
 .devcontainer/wp-content/upgrade-temp-backup/
 .devcontainer/wp-content/backup-db/
 .devcontainer/wp-content/backups/
+.devcontainer/wp-content/ai1wm-backups/
 .devcontainer/wp-content/blogs.dir/
 .devcontainerwp-content/wp-cache-config.php
 .devcontainer/wp-content/advanced-cache.php
