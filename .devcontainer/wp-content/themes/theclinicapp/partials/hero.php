@@ -1,7 +1,7 @@
 <?php
 // Get hero group field
 $hero = get_field('hero'); // 'hero' is the group field name
-$media = extract_first_media_with_type($hero['media_file']);
+$media = $hero['media_file'];
 if ($hero):
 ?>
     <!-- Hero Section -->
@@ -11,16 +11,20 @@ if ($hero):
                 <div class="col-lg-7 mb-4 order-lg-2 fade-in delay-2">
 
                     <?php
-                    if (!empty($media['html'])) {
+                    echo '<div class="media-wrapper">';
+                    echo ($media);
+                    echo '</div>';
 
-                        if ($media['type'] === 'iframe') {
-                            echo '<div class="media-wrapper iframe-embed ratio ratio-16x9 shadow-lg">';
-                        } else {
-                            echo '<div class="media-wrapper shadow-lg">';
-                        }
-                        echo $media['html'];
-                        echo '</div>';
-                    }
+                    // if (!empty($media['html'])) {
+
+                    //     if ($media['type'] === 'iframe') {
+                    //         echo '<div class="media-wrapper iframe-embed ratio ratio-16x9 shadow-lg">';
+                    //     } else {
+                    //         echo '<div class="media-wrapper shadow-lg">';
+                    //     }
+                    //     echo $media['html'];
+                    //     echo '</div>';
+                    // }
 
                     ?>
 

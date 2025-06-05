@@ -1,7 +1,8 @@
 <?php
 // Get secondary_feature group field
 $secondary_feature = get_field('secondary_feature'); // 'secondary_feature' is the group field name
-$media = extract_first_media_with_type($secondary_feature['media_file']);
+//$media = extract_first_media_with_type($secondary_feature['media_file']);
+$media = $secondary_feature['media_file'];
 if ($secondary_feature):
 ?>
     <!-- Features Second block the Appointment section -->
@@ -52,24 +53,19 @@ if ($secondary_feature):
                                 <p class="feature-description"><?php echo esc_html($secondary_feature['feature_description_3']); ?></p>
                             </div>
                         </div>
+                    <?php endif; ?>
                 </div>
-            <?php endif; ?>
 
-            <?php if (!empty($media['html'])): ?>
-                <div class="col-lg-6 mb-4 fade-in delay-5">
-                    <div class="media-container pe-lg-4">
-                        <?php if ($media['type'] === 'iframe'): ?>
-                            <div class="media-wrapper iframe-embed ratio ratio-16x9 shadow-lg">
-                            <?php else: ?>
-                                <div class="media-wrapper shadow-lg">
-                                <?php endif; ?>
-                                <?php echo $media['html']; ?>
-                                </div>
+                <?php if (!empty($media)): ?>
+                    <div class="col-lg-6 mb-4 fade-in delay-5">
+                        <div class="media-container pe-lg-4">
+                            <div class="media-wrapper">
+                                <?php echo $media; ?>
                             </div>
+                        </div>
                     </div>
                 <?php endif; ?>
-
-                </div>
             </div>
+        </div>
     </section>
 <?php endif; ?>

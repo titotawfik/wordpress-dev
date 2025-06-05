@@ -2,7 +2,76 @@ import Collapse from '../../node_modules/bootstrap/js/dist/collapse';
 import Dropdown from '../../node_modules/bootstrap/js/dist/dropdown';
 import Offcanvas from '../../node_modules/bootstrap/js/dist/offcanvas';    
 
+//Youtube iframe API and Videos player
+document.addEventListener("DOMContentLoaded", function () {
+  const iframes = document.querySelectorAll("iframe[src*='youtube.com/embed']");
 
+  // Load YouTube Iframe API
+  if (!window.YT) {
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(tag);
+  }
+
+  // Store iframe/player pairs
+  const players = [];
+
+  // Modify iframe URLs and remove width/height
+  iframes.forEach((iframe, index) => {
+    const src = iframe.getAttribute("src") || "";
+
+    // Remove width/height for responsive design
+    iframe.removeAttribute("width");
+    iframe.removeAttribute("height");
+
+    // Add/append necessary query parameters
+    const url = new URL(src, window.location.href);
+    url.searchParams.set("enablejsapi", "1");
+    url.searchParams.set("autoplay", "1");
+    url.searchParams.set("loop", "1");
+    url.searchParams.set("rel", "0");
+    url.searchParams.set("playlist", url.pathname.split("/").pop()); // loop requires playlist param
+
+    iframe.setAttribute("src", url.toString());
+    iframe.setAttribute("allow", "autoplay");
+
+    // Assign a unique ID if not present
+    if (!iframe.id) {
+      iframe.id = "yt-player-" + index;
+    }
+  });
+
+  // YouTube Iframe API ready callback
+  window.onYouTubeIframeAPIReady = function () {
+    iframes.forEach((iframe) => {
+      const player = new YT.Player(iframe.id, {
+        events: {
+          onReady: function (event) {
+            event.target.mute();       // Mute for autoplay
+            event.target.playVideo();  // Start playing
+            handleVisibility(player, iframe);
+            window.addEventListener("scroll", () => handleVisibility(player, iframe));
+          }
+        }
+      });
+      players.push(player);
+    });
+  };
+
+  // Visibility check and play/pause logic
+  function handleVisibility(player, iframe) {
+    const rect = iframe.getBoundingClientRect();
+    const inView = rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+    //console.log(`Checking visibility for player ${iframe.id}:`, rect, 'In view:', inView);
+    //console.log(`Player ${iframe.id} in view: ${inView}`);
+
+    if (inView) {
+      player.playVideo();
+    } else {
+      player.pauseVideo();
+    }
+  }
+});
 
 // animate when content come into view
 document.addEventListener("DOMContentLoaded", function () {
