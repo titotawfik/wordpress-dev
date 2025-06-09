@@ -1,7 +1,7 @@
 <?php
 // Get forth_features group field
 $forth_features = get_field('forth_features'); // 'forth_features' is the group field name
-$media = extract_first_media_with_type($forth_features['media_file']);
+$media = $forth_features['media_file'];
 
 if ($forth_features):
 ?>
@@ -53,22 +53,18 @@ if ($forth_features):
                                 <p class="feature-description"><?php echo esc_html($forth_features['feature_description_3']); ?></p>
                             </div>
                         </div>
+                    <?php endif; ?>
                 </div>
-            <?php endif; ?>
-            <?php if (!empty($media['html'])): ?>
+                <?php if (!empty($media)): ?>
                 <div class="col-lg-6 mb-4 fade-in delay-5">
                     <div class="media-container pe-lg-4">
-                        <?php if ($media['type'] === 'iframe'): ?>
-                            <div class="media-wrapper iframe-embed ratio ratio-16x9 shadow-lg">
-                            <?php else: ?>
-                                <div class="media-wrapper shadow-lg">
-                                <?php endif; ?>
-                                <?php echo $media['html']; ?>
-                                </div>
-                            </div>
+                        <div class="media-wrapper shadow-lg">
+                            <?php echo $media; ?>
+                        </div>
                     </div>
-                <?php endif; ?>
                 </div>
+                <?php endif; ?>
             </div>
+        </div>
     </section>
 <?php endif; ?>

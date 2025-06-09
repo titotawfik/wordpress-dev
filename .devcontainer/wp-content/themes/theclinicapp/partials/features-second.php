@@ -59,7 +59,7 @@ if ($secondary_feature):
                 <?php if (!empty($media)): ?>
                     <div class="col-lg-6 mb-4 fade-in delay-5">
                         <div class="media-container pe-lg-4">
-                            <div class="media-wrapper">
+                            <div class="media-wrapper shadow-lg">
                                 <?php echo $media; ?>
                             </div>
                         </div>

@@ -11,7 +11,7 @@ if ($hero):
                 <div class="col-lg-7 mb-4 order-lg-2 fade-in delay-2">
 
                     <?php
-                    echo '<div class="media-wrapper">';
+                    echo '<div class="media-wrapper shadow-lg">';
                     echo ($media);
                     echo '</div>';
 

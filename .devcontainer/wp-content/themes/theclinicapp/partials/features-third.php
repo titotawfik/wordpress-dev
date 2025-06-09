@@ -1,7 +1,7 @@
 <?php
 // Get third_features group field
 $third_features = get_field('third_features'); // 'third_features' is the group field name
-$media = extract_first_media_with_type($third_features['media_file']);
+$media = $third_features['media_file'];
 if ($third_features):
 ?>
     <!-- Features third block the patient recored section -->
@@ -53,21 +53,17 @@ if ($third_features):
                             </div>
                         </div>
                 </div>
-            <?php endif; ?>
-            <?php if (!empty($media['html'])): ?>
-                <div class="col-lg-6 mb-4 fade-in delay-5">
-                    <div class="media-container pe-lg-4">
-                        <?php if ($media['type'] === 'iframe'): ?>
-                            <div class="media-wrapper iframe-embed ratio ratio-16x9 shadow-lg">
-                            <?php else: ?>
-                                <div class="media-wrapper shadow-lg">
-                                <?php endif; ?>
-                                <?php echo $media['html']; ?>
-                                </div>
+                <?php endif; ?>
+                <?php if (!empty($media)): ?>
+                    <div class="col-lg-6 mb-4 fade-in delay-5">
+                        <div class="media-container pe-lg-4">
+                            <div class="media-wrapper shadow-lg">
+                                <?php echo $media; ?>
                             </div>
+                        </div>
                     </div>
                 <?php endif; ?>
-                </div>
             </div>
+        </div>
     </section>
 <?php endif; ?>
