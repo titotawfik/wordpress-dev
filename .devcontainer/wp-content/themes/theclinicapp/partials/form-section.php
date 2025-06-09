@@ -18,10 +18,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="form-card py-5">
-                    <h4 class="fw-bold fs-4 mb-5">Get Started with TheClinicApp</h4>
-                    <?php echo do_shortcode('[wpforms id="109" title="false"]'); ?>
+                    <h4 class="fw-bold fs-4">Get Started with TheClinicApp</h4>
+                    <iframe src="https://trial.theclinicapp.com/trialrequest" scrolling="no"
+                    style="overflow: hidden; border: none;" width="100%" height="250" frameborder="0" allowfullscreen></iframe>
                     <div class="form-text">
-                            No credit card required. Cancel anytime.
+                        No credit card required. Cancel anytime.
                     </div>
                 </div>
             </div>
