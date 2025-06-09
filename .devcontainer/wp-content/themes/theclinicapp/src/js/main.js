@@ -5,6 +5,7 @@ import Offcanvas from '../../node_modules/bootstrap/js/dist/offcanvas';
 //Youtube iframe API and Videos player
 document.addEventListener("DOMContentLoaded", function () {
   const iframes = document.querySelectorAll("iframe[src*='youtube.com/embed']");
+  //const hostname = window.location.hostname;
 
   // Load YouTube Iframe API
   if (!window.YT) {
@@ -31,8 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
     url.searchParams.set("loop", "1");
     url.searchParams.set("rel", "0");
     url.searchParams.set("playlist", url.pathname.split("/").pop()); // loop requires playlist param
+    url.searchParams.set("controls", "0"); // Hide controls
+    //url.searchParams.set("playsinline", "1"); // Inline playback on iOS
+    url.searchParams.set("origin", window.location.origin); // Set origin for security
 
-    iframe.setAttribute("src", url.toString());
+    iframe.setAttribute("src", url.toString());  
     iframe.setAttribute("allow", "autoplay");
 
     // Assign a unique ID if not present
