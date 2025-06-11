@@ -53,13 +53,13 @@
     <div class="card mb-4 rounded-3 shadow-sm fade-in delay-4 text-center">
        <div class="card-header"><h5>Additional Charges:</h5></div>
        <div class="card-body">
-        <p>SMS messages are 8p</p>
-        <p>Automated emails are 2p (ad-hoc or manual emails are free)</p>
+        <p class="my-0">SMS messages are 8p</p>
+        <p class="my-0">Automated emails are 2p (ad-hoc or manual emails are free)</p>
         <hr />
         <p class="text-muted fw-light my-0">Costs associated with SMS or email are charged monthly in arrears on a ‘Pay As You Go’ basis.</p>
         <p class="text-muted fw-light my-0">All prices are exclusive of VAT</p>
         <p class="text-muted fw-light my-0">Fees are charged monthly on a rolling contract and you can cancel at any time</p>   
        </div>
     </div>
-    
+
 </div>
