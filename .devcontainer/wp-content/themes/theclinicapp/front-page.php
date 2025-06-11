@@ -8,6 +8,7 @@ get_header(); ?>
 <main id="main-content">
   <?php get_template_part('partials/hero'); ?>
   <?php get_template_part('partials/features-first'); ?>
+  <?php get_template_part('partials/price'); ?>
   <?php get_template_part('partials/features-second'); ?>
   <?php get_template_part('partials/features-third'); ?>
   <?php get_template_part('partials/features-forth'); ?>
