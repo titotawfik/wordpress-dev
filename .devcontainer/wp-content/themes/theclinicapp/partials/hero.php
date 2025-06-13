@@ -41,8 +41,12 @@ if ($hero):
                     <?php endif; ?>
 
                     <?php if (!empty($hero['description'])): ?>
-                        <p class="lead py-lg-3 text-grey-600 fade-in delay-3"><?php echo esc_html($hero['description']); ?></p>
+                        <p class="lead py-lg-2 text-grey-600 fade-in delay-3"><?php echo esc_html($hero['description']); ?></p>
                     <?php endif; ?>
+                    
+                    <div class="mb-2 badge text-bg-primary fade-in delay-3">
+                        <p class="my-0 py-2">All for just £10/month which includes ALL modules.</p>
+                    </div>
 
                     <div class="gap-3 d-grid d-sm-flex">
                         <?php if (!empty($hero['primary_button_text']) && !empty($hero['primary_button_url'])): ?>
