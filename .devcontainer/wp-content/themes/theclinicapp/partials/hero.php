@@ -52,11 +52,15 @@ if ($hero):
                             </a>
                         <?php endif; ?>
 
-                        <?php if (!empty($hero['secondary_button_text']) && !empty($hero['secondary_button_url'])): ?>
-                            <a href="<?php echo esc_url($hero['secondary_button_url']); ?>" class="btn btn-outline-secondary cta-btn fade-in delay-3">
-                                <?php echo esc_html($hero['secondary_button_text']); ?>
-                            </a>
-                        <?php endif; ?>
+                    <?php
+                    /*
+                    <?php if (!empty($hero['secondary_button_text']) && !empty($hero['secondary_button_url'])): ?>
+                        <a href="<?php echo esc_url($hero['secondary_button_url']); ?>" class="btn btn-outline-secondary cta-btn fade-in delay-3">
+                            <?php echo esc_html($hero['secondary_button_text']); ?>
+                        </a>
+                    <?php endif; ?>
+                    */
+                    ?>
                     </div>
                 </div>
             </div>
