@@ -32,7 +32,7 @@
       <div class="gap-2 d-sm-flex">
         <button class="border-0 switch-theme-btn" type="button" title="switch theme" id="theme-toggle"></button>
         <a href="https://app.theclinicapp.com/" target="_blank" class="btn btn-outline-secondary me-md-2 d-none d-sm-flex">login</a>
-        <a href="#signup" class="btn btn-primary">Sign Up</a>
+        <a href="#signup" class="btn btn-primary">Start now</a>
       </div>
       <!-- Mobile Menu Toggle -->
       <button title="toggle menu" class="btn toggle-mob d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">

@@ -49,13 +49,14 @@ if ($hero):
                         <p class="my-0"><?php echo esc_html($hero['includes']); ?></p>
                     </div>
                     <?php endif; ?>
+                    
+                    <?php if (!empty($hero['primary_button_text']) && !empty($hero['primary_button_url'])): ?>
                     <div class="gap-3 d-grid d-sm-flex">
-                        <?php if (!empty($hero['primary_button_text']) && !empty($hero['primary_button_url'])): ?>
                             <a href="<?php echo esc_url($hero['primary_button_url']); ?>" class="btn btn-primary me-md-2 cta-btn fade-in delay-3">
                                 <?php echo esc_html($hero['primary_button_text']); ?>
                                 <i class="fa-solid fa-arrow-right ms-2"></i>
                             </a>
-                        <?php endif; ?>
+                    <?php endif; ?>
 
                     <?php
                     /*
