@@ -35,7 +35,7 @@ if ($hero):
                     <?php endif; ?>
                 </div>
 
-                <div class="col-lg-5 py-lg-5">
+                <div class="col-lg-5 py-xl-4 py-lg-2">
                     <?php if (!empty($hero['title'])): ?>
                         <h1 class="fade-in delay-2"><?php echo esc_html($hero['title']); ?></h1>
                     <?php endif; ?>
@@ -43,11 +43,12 @@ if ($hero):
                     <?php if (!empty($hero['description'])): ?>
                         <p class="lead py-lg-2 text-grey-600 fade-in delay-3"><?php echo esc_html($hero['description']); ?></p>
                     <?php endif; ?>
-                    
-                    <div class="mb-2 badge text-bg-primary fade-in delay-3">
-                        <p class="my-0 py-2">All for just £10/month which includes ALL modules.</p>
+                    <?php if (!empty($hero['monthly_price'])): ?>
+                   <div class="px-2 py-3 mb-4 bg-primary text-white rounded-3 fade-in delay-4 text-center">
+                        <h2 class="fw-bold mb-0"><?php echo esc_html($hero['monthly_price']); ?></h2>
+                        <p class="my-0"><?php echo esc_html($hero['includes']); ?></p>
                     </div>
-
+                    <?php endif; ?>
                     <div class="gap-3 d-grid d-sm-flex">
                         <?php if (!empty($hero['primary_button_text']) && !empty($hero['primary_button_url'])): ?>
                             <a href="<?php echo esc_url($hero['primary_button_url']); ?>" class="btn btn-primary me-md-2 cta-btn fade-in delay-3">
