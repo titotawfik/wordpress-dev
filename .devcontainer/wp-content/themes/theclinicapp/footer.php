@@ -7,7 +7,7 @@
  */
 ?>
 
-<footer class="footer-container bg-grey-900 py-5 mt-5" id="footer">
+<footer class="footer-container bg-grey-900 py-5 border-top-grey-800" id="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-4 mb-4">
@@ -42,7 +42,7 @@
 
 <?php wp_footer(); ?>
 <script>
-  const iframe = document.getElementById('signup');
+  const iframe = document.getElementById('signuptrail');
   window.addEventListener('message', (event) => {
       // Optional: Verify the origin
   if (event.origin !== "https://trial.theclinicapp.com") return;

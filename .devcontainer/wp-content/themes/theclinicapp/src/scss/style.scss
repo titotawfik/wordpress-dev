@@ -1,3 +1,10 @@
 @import "bootstrap";
 @import "fontawesome";
 @import "custom";
+
+.wp-block-group__inner-container, .wp-block-columns {
+  @extend .container;
+} 
+.wp-block-image {
+  @extend .text-center;
+}

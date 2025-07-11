@@ -1,6 +1,6 @@
 <?php get_header(); ?>
         
-        <main class="main container fade-in delay-2">
+        <main class="main container">
             <div class="row py-5">
                 <div class="col-lg-12">
                      <?php if ( have_posts() ) : ?>
