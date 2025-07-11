@@ -14,17 +14,17 @@
                 <h5 class="text-white fw-bold"><?php bloginfo('name'); ?></h5>
                 <p class="text-gray-400"><?php echo  get_bloginfo('description'); ?></p>
             </div>
-            <!-- <div class="col-md-4 mb-4">
+             <div class="col-md-4 mb-4">
                 <h6 class="text-white fw-bold">Resources</h6>
                 <?php
-                    /*  
+                    
                    wp_nav_menu(array(
                         'theme_location' => 'footer-menu',  
                         'container'      => false,           
                         'menu_class'     => 'footer-links list-unstyled text-gray-400'       
-                    )); */
+                    )); 
                 ?>
-            </div> -->
+            </div>
             <div class="footer-bottom-container d-flex justify-content-between py-5">
                 <div class="col-md-8 mb-4">
                     <p class="mb-0 text-gray-400">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
@@ -41,6 +41,18 @@
 </footer>
 
 <?php wp_footer(); ?>
+<script>
+  const iframe = document.getElementById('signup');
+  window.addEventListener('message', (event) => {
+      // Optional: Verify the origin
+  if (event.origin !== "https://trial.theclinicapp.com") return;
+  if (event.data.type === 'setHeight') {
+    const scrollY = window.scrollY; // Save scroll position
+    iframe.style.height = event.data.height + 'px';
+    window.scrollTo({ top: scrollY }); // Restore it
+  }
+});
+</script>
 </body>
 
 </html>

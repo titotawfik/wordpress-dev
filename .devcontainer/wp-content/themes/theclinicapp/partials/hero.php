@@ -5,10 +5,45 @@ $media = $hero['media_file'];
 if ($hero):
 ?>
     <!-- Hero Section -->
-    <section class="min-vh-100 d-flex align-items-center fade-on-scroll hero-section" id="hero-section">
+    <section class="min-vh-100 d-flex align-items-center hero-section" id="hero-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 mb-4 order-lg-2 fade-in delay-2">
+                <div class="col-lg-5 py-5">
+                    <?php if (!empty($hero['title'])): ?>
+                        <h1 class=""><?php echo esc_html($hero['title']); ?></h1>
+                    <?php endif; ?>
+
+                    <?php if (!empty($hero['description'])): ?>
+                        <p class="lead py-lg-2 text-grey-600"><?php echo esc_html($hero['description']); ?></p>
+                    <?php endif; ?>
+                    <?php if (!empty($hero['monthly_price'])): ?>
+                   <div class="px-2 py-3 mb-4 bg-primary text-white rounded-3 text-center">
+                        <h2 class="fw-bold mb-0"><?php echo esc_html($hero['monthly_price']); ?></h2>
+                        <p class="my-0"><?php echo esc_html($hero['includes']); ?></p>
+                    </div>
+                    <?php endif; ?>
+                    
+                    <?php if (!empty($hero['primary_button_text']) && !empty($hero['primary_button_url'])): ?>
+                    <div class="gap-3 d-grid d-sm-flex">
+                            <a href="<?php echo esc_url($hero['primary_button_url']); ?>" class="btn btn-primary me-md-2 cta-btn">
+                                <?php echo esc_html($hero['primary_button_text']); ?>
+                                <i class="fa-solid fa-arrow-right ms-2"></i>
+                            </a>
+                    <?php endif; ?>
+
+                    <?php
+                    /*
+                    <?php if (!empty($hero['secondary_button_text']) && !empty($hero['secondary_button_url'])): ?>
+                        <a href="<?php echo esc_url($hero['secondary_button_url']); ?>" class="btn btn-outline-secondary cta-btn fade-in delay-3">
+                            <?php echo esc_html($hero['secondary_button_text']); ?>
+                        </a>
+                    <?php endif; ?>
+                    */
+                    ?>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 mb-4">
 
                     <?php
                     echo '<div class="media-wrapper shadow-lg">';
@@ -35,40 +70,6 @@ if ($hero):
                     <?php endif; ?>
                 </div>
 
-                <div class="col-lg-5 py-xl-4 py-lg-2">
-                    <?php if (!empty($hero['title'])): ?>
-                        <h1 class="fade-in delay-2"><?php echo esc_html($hero['title']); ?></h1>
-                    <?php endif; ?>
-
-                    <?php if (!empty($hero['description'])): ?>
-                        <p class="lead py-lg-2 text-grey-600 fade-in delay-3"><?php echo esc_html($hero['description']); ?></p>
-                    <?php endif; ?>
-                    <?php if (!empty($hero['monthly_price'])): ?>
-                   <div class="px-2 py-3 mb-4 bg-primary text-white rounded-3 fade-in delay-4 text-center">
-                        <h2 class="fw-bold mb-0"><?php echo esc_html($hero['monthly_price']); ?></h2>
-                        <p class="my-0"><?php echo esc_html($hero['includes']); ?></p>
-                    </div>
-                    <?php endif; ?>
-                    
-                    <?php if (!empty($hero['primary_button_text']) && !empty($hero['primary_button_url'])): ?>
-                    <div class="gap-3 d-grid d-sm-flex">
-                            <a href="<?php echo esc_url($hero['primary_button_url']); ?>" class="btn btn-primary me-md-2 cta-btn fade-in delay-3">
-                                <?php echo esc_html($hero['primary_button_text']); ?>
-                                <i class="fa-solid fa-arrow-right ms-2"></i>
-                            </a>
-                    <?php endif; ?>
-
-                    <?php
-                    /*
-                    <?php if (!empty($hero['secondary_button_text']) && !empty($hero['secondary_button_url'])): ?>
-                        <a href="<?php echo esc_url($hero['secondary_button_url']); ?>" class="btn btn-outline-secondary cta-btn fade-in delay-3">
-                            <?php echo esc_html($hero['secondary_button_text']); ?>
-                        </a>
-                    <?php endif; ?>
-                    */
-                    ?>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

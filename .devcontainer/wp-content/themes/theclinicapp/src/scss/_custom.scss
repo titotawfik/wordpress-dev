@@ -92,6 +92,8 @@ h1 {
 
 .switch-theme-btn {
   background-color: transparent;
+  height:42px;
+  width:50px;
 }
 
 .btn.toggle-mob,
@@ -445,7 +447,10 @@ label {
   text-decoration: none;
 }
 .media-wrapper {
-  p {
+  .rll-youtube-player{
+    padding-bottom: 69.2% !important;
+  }
+  p:not(:empty) {
     position: relative;
     --bs-aspect-ratio: 69.2%;
     > * {
@@ -461,7 +466,7 @@ label {
       padding-top: var(--bs-aspect-ratio);
     }
   }
-}
+} 
 
 @media (min-width: 768px) {
   .h-md-100 {
