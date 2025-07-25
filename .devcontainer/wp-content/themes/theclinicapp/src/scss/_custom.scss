@@ -21,7 +21,7 @@
 
 body {
   font-family: var(--font-family);
-  overflow-x: hidden;
+
 }
 
 h1 {
@@ -33,7 +33,10 @@ h1 {
 .header {
   border-bottom: 1px solid var(--grey-100);
 }
-
+.main {
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
 .text-grey-100 {
   color: var(--grey-100);
 }
