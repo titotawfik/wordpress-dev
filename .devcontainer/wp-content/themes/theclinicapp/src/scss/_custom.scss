@@ -287,15 +287,15 @@ body.dark-theme {
   .header, .features-section {
     background-color: color-mix(in oklab, var(--grey-900) 90%, transparent) !important;
   }
-  .header * {
+  .header *:not(.nav .dropdown-item) {
     color: var(--slate-300);
   }
   .btn-primary {
-    color: var(--grey-900);
+    color: var(--grey-900) !important;
     background-color: var(--slate-300);
   }
   .btn-outline-secondary {
-    color: white;
+    color: white !important;
     background-color: color-mix(in oklab, var(--input) 30%, transparent);
     border-color: var(--input);
   }
@@ -333,6 +333,12 @@ body.dark-theme {
       color: white;
     }
   }
+  .has-background {
+    background: var(--grey-800) !important;
+ }
+ .post__link:hover{
+  color: var(--slate-300);
+ }
 }
 
 // body.dark-theme .wpforms-form input {
@@ -464,10 +470,10 @@ label {
   .rll-youtube-player{
     padding-bottom: 69.2% !important;
   }
-  p:not(:empty) {
+  p:has(iframe) {
     position: relative;
     --bs-aspect-ratio: 69.2%;
-    > * {
+    >iframe {
       position: absolute;
       top: 0;
       left: 0;

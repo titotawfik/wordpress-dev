@@ -17,7 +17,7 @@ if ($hero):
                         <p class="lead py-lg-2 text-grey-600"><?php echo esc_html($hero['description']); ?></p>
                     <?php endif; ?>
                     <?php if (!empty($hero['monthly_price'])): ?>
-                   <div class="px-2 py-3 mb-4 bg-primary text-white rounded-3 text-center">
+                   <div class="px-2 py-3 mb-4">
                         <h2 class="fw-bold mb-0"><?php echo esc_html($hero['monthly_price']); ?></h2>
                         <p class="my-0"><?php echo esc_html($hero['includes']); ?></p>
                     </div>
@@ -43,7 +43,7 @@ if ($hero):
                     </div>
                 </div>
 
-                <div class="col-lg-7 mb-4">
+                <div class="col-lg-7 mb-4 mt-lg-5">
 
                     <?php
                     echo '<div class="media-wrapper shadow-lg">';
