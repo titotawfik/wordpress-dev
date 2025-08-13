@@ -2546,6 +2546,14 @@ $fa-var-pix: \e43a;
 $fa-var-steam-symbol: \f3f6;
 
 $fa-icons: (
+  "cloud-arrow-up": $fa-var-cloud-arrow-up,
+  "calendar-days": $fa-var-calendar-days,
+  "laptop-medical": $fa-var-laptop-medical,
+  "credit-card": $fa-var-credit-card,
+  "wand-sparkles": $fa-var-wand-sparkles,
+  "fa-gauge": $fa-var-gauge,
+  "mobile-screen-button": $fa-var-mobile-screen-button,
+  "home": $fa-var-home,
   "bars": $fa-var-bars,
   "arrow-right": $fa-var-arrow-right,
   "users": $fa-var-users,
@@ -2562,5 +2570,9 @@ $fa-icons: (
 );
 
 $fa-brand-icons: (
-  "youtube": $fa-var-youtube
+  "wpforms": $fa-var-wpforms,
+  "youtube": $fa-var-youtube,
+  "facebook": $fa-var-facebook,
+  "instagram": $fa-var-instagram,
+  "linkedin": $fa-var-linkedin,
 );

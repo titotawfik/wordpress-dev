@@ -4,7 +4,7 @@ $first_features = get_field('first_features'); // 'first_features' is the group 
 if ($first_features):
 ?>
     <!-- Features Section -->
-    <div id="features-section" class="features-section py-5 bg-light">
+    <div id="features-section" class="features-section py-5">
         <div class="container ">
             <?php if(!empty($first_features['heading'])): ?>
             <!-- Header Section -->

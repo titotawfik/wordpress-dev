@@ -276,6 +276,12 @@ body.dark-theme .accordion-button:not(.collapsed) {
   background-color: #020618;
 }
 
+.carousel {
+  .carousel-desc {
+    min-height: 70px;
+  }
+}
+
 /* Dark theme */
 body.dark-theme {
   color: #fcf9fa;

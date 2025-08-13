@@ -1,6 +1,7 @@
 import Collapse from '../../node_modules/bootstrap/js/dist/collapse';
 import Dropdown from '../../node_modules/bootstrap/js/dist/dropdown';
-import Offcanvas from '../../node_modules/bootstrap/js/dist/offcanvas';    
+import Offcanvas from '../../node_modules/bootstrap/js/dist/offcanvas';
+import Carousel from '../../node_modules/bootstrap/js/dist/carousel';    
 
 //Youtube iframe API and Videos player
 // document.addEventListener("DOMContentLoaded", function () {

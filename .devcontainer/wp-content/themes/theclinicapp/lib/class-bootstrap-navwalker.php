@@ -39,14 +39,12 @@ class Bootstrap_Navwalker extends Walker_Nav_Menu
         $atts['title'] = !empty($item->attr_title) ? $item->attr_title : '';
         $atts['target'] = !empty($item->target) ? $item->target : '';
         $atts['rel'] = !empty($item->xfn) ? $item->xfn : '';
-
-        // Always set href to real URL
         $atts['href'] = !empty($item->url) ? $item->url : '#';
 
         if ($depth === 0) {
             $atts['class'] = 'nav-link';
         } else {
-            $atts['class'] = 'dropdown-item'; // submenu links
+            $atts['class'] = 'dropdown-item';
         }
 
         if (in_array('menu-item-has-children', $classes)) {
@@ -64,7 +62,13 @@ class Bootstrap_Navwalker extends Walker_Nav_Menu
             }
         }
 
+        // Custom Title Logic
         $title = apply_filters('the_title', $item->title, $item->ID);
+
+        // Check if this is the home link (by URL or by object_id matching front page ID)
+        if (trailingslashit($item->url) == trailingslashit(home_url('/'))) {
+            $title = '<span class="visually-hidden">Home</span><i class="fa fa-home" aria-hidden="true"></i>';
+        }
 
         $output .= '<a' . $attributes . '>';
         $output .= $title;
