@@ -21,6 +21,7 @@
 
 body {
   font-family: var(--font-family);
+  @extend .text-grey-600;
 
 }
 
@@ -47,6 +48,10 @@ h1 {
 
 .text-grey-600 {
   color: var(--grey-600);
+}
+
+.text-grey-800 {
+  color: var(--grey-800);
 }
 
 .text-grey-900 {
@@ -115,6 +120,11 @@ h1 {
   bottom: -20px;
 }
 
+.api_logos {
+  .wp-caption-text {
+    font-size: 1rem;
+  }
+}
 /* Features Section */
 
 /* Features cards */
@@ -170,9 +180,14 @@ h1 {
     max-width: var(--bs-container-lg-size);
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   .site-title {
     font-size: 1rem !important;
+  }
+}
+@media (max-width: 350px) {
+  .site-title {
+    display: none;
   }
 }
 
@@ -277,8 +292,14 @@ body.dark-theme .accordion-button:not(.collapsed) {
 }
 
 .carousel {
+  .carousel-indicators {
+    margin-right:0;
+    margin-left: 0;
+    justify-content: left;
+  }
   .carousel-desc {
-    min-height: 70px;
+    font-size: 1.5rem;
+    min-height: 90px;
   }
 }
 

@@ -12,13 +12,12 @@ if ($hero):
                     <?php if (!empty($hero['title'])): ?>
                         <h1 class=""><?php echo esc_html($hero['title']); ?></h1>
                     <?php endif; ?>
-            
-                   <?php /*
-                    <?php if (!empty($hero['description'])): ?>
-                        <p class="lead py-lg-2 text-grey-600"><?php echo esc_html($hero['description']); ?></p>
-                    <?php endif; ?>
-                    */ ?>
                      <?php get_template_part('partials/home-carousel'); ?>
+                                 
+                    <?php if (!empty($hero['api_logos'])): ?>
+                        <div class="lead py-2 api_logos d-flex justify-content-between align-items-center flex-wrap"><?php echo ($hero['api_logos']); ?></div>
+                    <?php endif; ?>
+                    
                     <?php if (!empty($hero['monthly_price'])): ?>
                    <div class="mb-4">
                         <h2 class="fw-bold mb-0"><?php echo esc_html($hero['monthly_price']); ?></h2>
