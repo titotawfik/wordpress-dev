@@ -1,7 +1,7 @@
-import Collapse from '../../node_modules/bootstrap/js/dist/collapse';
-import Dropdown from '../../node_modules/bootstrap/js/dist/dropdown';
-import Offcanvas from '../../node_modules/bootstrap/js/dist/offcanvas';
-import Carousel from '../../node_modules/bootstrap/js/dist/carousel';    
+import Collapse from "../../node_modules/bootstrap/js/dist/collapse";
+import Dropdown from "../../node_modules/bootstrap/js/dist/dropdown";
+import Offcanvas from "../../node_modules/bootstrap/js/dist/offcanvas";
+import Carousel from "../../node_modules/bootstrap/js/dist/carousel";
 
 //Youtube iframe API and Videos player
 // document.addEventListener("DOMContentLoaded", function () {
@@ -37,7 +37,7 @@ import Carousel from '../../node_modules/bootstrap/js/dist/carousel';
 //     //url.searchParams.set("playsinline", "1"); // Inline playback on iOS
 //     url.searchParams.set("origin", window.location.origin); // Set origin for security
 
-//     iframe.setAttribute("src", url.toString());  
+//     iframe.setAttribute("src", url.toString());
 //     iframe.setAttribute("allow", "autoplay");
 
 //     // Assign a unique ID if not present
@@ -80,57 +80,85 @@ import Carousel from '../../node_modules/bootstrap/js/dist/carousel';
 
 // animate when content come into view
 document.addEventListener("DOMContentLoaded", function () {
-    const fadeElements = document.querySelectorAll(".fade-on-scroll");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible"); 
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-  
-    fadeElements.forEach((element) => {
-      observer.observe(element);
-    });
-  });
-  
-  // theme-switcher
-  const themeToggle = document.getElementById("theme-toggle");
-  const body = document.body;
-  
-  // Check for saved theme preference, otherwise default to light
-  const savedTheme = localStorage.getItem("theme");
-  
-  // Set initial theme (always light by default)
-  if (savedTheme === "dark") {
-    setTheme("dark");
-  } else {
-    setTheme("light");
-  }
-  
-  // Toggle theme when button is clicked
-  themeToggle.addEventListener("click", () => {
-    const currentTheme = body.classList.contains("dark-theme") ? "dark" : "light";
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
-  
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-  });
-  
-  // Function to set theme and update icon
-  function setTheme(theme) {
-    if (theme === "dark") {
-      body.classList.remove("light-theme");
-      body.classList.add("dark-theme");
-      themeToggle.innerHTML = '<i class="fa-regular fa-sun fa-xl"></i>';
-    } else {
-      body.classList.remove("dark-theme");
-      body.classList.add("light-theme");
-      themeToggle.innerHTML = '<i class="fa-regular fa-moon fa-xl"></i>';
+  const fadeElements = document.querySelectorAll(".fade-on-scroll");
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.1
     }
+  );
+
+  fadeElements.forEach(element => {
+    observer.observe(element);
+  });
+});
+
+// theme-switcher
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Check for saved theme preference, otherwise default to light
+const savedTheme = localStorage.getItem("theme");
+
+// Set initial theme (always light by default)
+if (savedTheme === "dark") {
+  setTheme("dark");
+} else {
+  setTheme("light");
+}
+
+// Toggle theme when button is clicked
+themeToggle.addEventListener("click", () => {
+  const currentTheme = body.classList.contains("dark-theme") ? "dark" : "light";
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+  setTheme(newTheme);
+  localStorage.setItem("theme", newTheme);
+});
+
+// Function to set theme and update icon
+function setTheme(theme) {
+  if (theme === "dark") {
+    body.classList.remove("light-theme");
+    body.classList.add("dark-theme");
+    themeToggle.innerHTML = '<i class="fa-regular fa-sun fa-xl"></i>';
+  } else {
+    body.classList.remove("dark-theme");
+    body.classList.add("light-theme");
+    themeToggle.innerHTML = '<i class="fa-regular fa-moon fa-xl"></i>';
   }
+}
+// Set equal height for carousel items
+function setEqualCarouselHeights() {
+  const items = document.querySelectorAll("#heroCarousel .carousel-item");
+  let maxHeight = 0;
+
+  // Reset heights first (important for recalculating on resize)
+  items.forEach(item => (item.style.minHeight = ""));
+
+  // Find tallest
+  items.forEach(item => {
+    maxHeight = Math.max(maxHeight, item.scrollHeight);
+  });
+
+  // Apply tallest height to all
+  items.forEach(item => {
+    item.style.minHeight = maxHeight + "px";
+  });
+}
+
+// Run on load
+window.addEventListener("load", setEqualCarouselHeights);
+
+// Run on resize (with debounce to avoid performance issues)
+let resizeTimeout;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(setEqualCarouselHeights, 200);
+});

@@ -5,6 +5,7 @@
   --font-family: sans-serif, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   --grey-100: oklch(97% 0.003 264.542deg);
+  --grey-200: #f2f2f2;
   --grey-400: #99a1af;
   --grey-600: #4a5565;
   --grey-800: #1e2939;
@@ -16,13 +17,13 @@
   --light-blue: #eef2ff;
   --dark-blue-950: #0d1941;
   --bs-nav-link-color: #4a5565;
+  --bs-card-title-color: #4a5565;
   --input: oklch(100% 0 0deg / 15%);
 }
 
 body {
   font-family: var(--font-family);
   @extend .text-grey-600;
-
 }
 
 h1 {
@@ -58,12 +59,20 @@ h1 {
   color: var(--grey-900);
 }
 
+.bg-grey-200 {
+  background: var(--grey-200);
+}
+
 .bg-light-blue {
   background-color: var(--light-blue);
 }
 
 .bg-grey-900 {
   background-color: var(--grey-900);
+}
+
+.bg-grey-600 {
+  background-color: var(--grey-600);
 }
 
 .bg-teal--gradient {
@@ -101,8 +110,8 @@ h1 {
 
 .switch-theme-btn {
   background-color: transparent;
-  height:42px;
-  width:50px;
+  height: 42px;
+  width: 50px;
 }
 
 .btn.toggle-mob,
@@ -145,6 +154,7 @@ h1 {
 
 .card-title {
   font-size: 1.2rem;
+  @extend .text-grey-600;
 }
 
 .feature-icon {
@@ -172,7 +182,6 @@ h1 {
 .feature-description {
   color: #6c757d;
 }
-
 
 /* Responsive design */
 @media (min-width: 1400px) {
@@ -274,32 +283,15 @@ h1 {
 .accordion-button:not(.collapsed) {
   background-color: transparent;
 }
-
-/* Dark theme Accordion */
-
-body.dark-theme .accordion-button {
-  color: white;
-}
-
-body.dark-theme .accordion-body {
-  color: var(--slate-300);
-}
-
-body.dark-theme .accordion-button,
-body.dark-theme .accordion-body,
-body.dark-theme .accordion-button:not(.collapsed) {
-  background-color: #020618;
-}
-
 .carousel {
   .carousel-indicators {
-    margin-right:0;
+    margin-right: 0;
     margin-left: 0;
+    margin-bottom: 0;
     justify-content: left;
   }
   .carousel-desc {
-    font-size: 1.5rem;
-    min-height: 90px;
+    font-size: 1.35rem;
   }
 }
 
@@ -311,7 +303,8 @@ body.dark-theme {
   .header {
     border-color: var(--grey-900);
   }
-  .header, .features-section {
+  .header,
+  .features-section {
     background-color: color-mix(in oklab, var(--grey-900) 90%, transparent) !important;
   }
   .header *:not(.nav .dropdown-item) {
@@ -326,13 +319,16 @@ body.dark-theme {
     background-color: color-mix(in oklab, var(--input) 30%, transparent);
     border-color: var(--input);
   }
-  .text-secondary, .feature-description, .text-muted {
+  .text-secondary,
+  .feature-description,
+  .text-muted {
     color: var(--slate-300) !important;
   }
   .card {
     background-color: var(--slate-800);
     color: var(--slate-300);
-    .card-title, .card-header {
+    .card-title,
+    .card-header {
       color: white;
     }
   }
@@ -344,7 +340,8 @@ body.dark-theme {
   .text-grey-900 {
     color: white;
   }
-  .appointment-section {
+  .appointment-section,
+  .bg-grey-200 {
     background-color: var(--dark-blue-950);
   }
 
@@ -362,12 +359,27 @@ body.dark-theme {
   }
   .has-background {
     background: var(--grey-800) !important;
- }
- .post__link:hover{
-  color: var(--slate-300);
- }
+  }
+  .post__link:hover {
+    color: var(--slate-300);
+  }
 }
 
+/* Dark theme Accordion */
+
+body.dark-theme .accordion-button {
+  color: white;
+}
+
+body.dark-theme .accordion-body {
+  color: var(--slate-300);
+}
+
+body.dark-theme .accordion-button,
+body.dark-theme .accordion-body,
+body.dark-theme .accordion-button:not(.collapsed) {
+  background-color: #020618;
+}
 // body.dark-theme .wpforms-form input {
 //   color: white;
 //   background-color: var(--slate-800);
@@ -415,7 +427,8 @@ label {
   background-color: #1e293b;
 }
 
-.form-text, .fs-7 {
+.form-text,
+.fs-7 {
   font-size: 0.875rem;
 }
 
@@ -494,13 +507,13 @@ label {
   text-decoration: none;
 }
 .media-wrapper {
-  .rll-youtube-player{
+  .rll-youtube-player {
     padding-bottom: 69.2% !important;
   }
   p:has(iframe) {
     position: relative;
     --bs-aspect-ratio: 69.2%;
-    >iframe {
+    > iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -513,7 +526,7 @@ label {
       padding-top: var(--bs-aspect-ratio);
     }
   }
-} 
+}
 
 @media (min-width: 768px) {
   .h-md-100 {

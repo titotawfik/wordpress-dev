@@ -1,9 +1,9 @@
 <?php
 ?>
 <div id="price" class="container-md py-5">
-    <h2 class="fw-bold mb-3 text-grey-900 fade-in delay-4 text-center">Pricing</h2>
-    <p class="lead text-grey-600 fade-in delay-4 text-center my-0">TheClinicApp is a clinic management software is free to try for the first 14 days</p>
-    <p class="text-grey-600 fade-in delay-4 text-center">Simple and affordable pricing. Pricing is per clinical user and admin staff are free.</p>
+    <h2 class="fw-bold mb-3 fade-in delay-4 text-center">Pricing</h2>
+    <p class="lead fw-bold fade-in delay-4 text-center my-0">TheClinicApp is a clinic management software is free to try for the first 14 days</p>
+    <p class="fade-in delay-4 text-center">Simple and affordable pricing. Pricing is per clinical user and admin staff are free.</p>
 
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center ">
         <div class="col fade-in delay-4">
@@ -53,7 +53,7 @@
         <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
             <div class="card mb-4 rounded-3 shadow-sm fade-in delay-4 ">
                 <div class="card-header text-center bg-teal--gradient">
-                    <h4>Additional Charges:</h4>
+                    <h4 class="text-grey-600">Additional Charges:</h4>
                 </div>
                 <div class="card-body fs-7">
                     <p class="my-0">SMS messages are 8p.</p>
