@@ -162,3 +162,41 @@ window.addEventListener("resize", () => {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(setEqualCarouselHeights, 200);
 });
+
+document.querySelectorAll('.offcanvas a[href^="#"]').forEach(link => {
+  link.addEventListener("click", e => {
+    e.stopPropagation();
+    const body = document.body;
+    const offcanvas = document.querySelector(".offcanvas.show");
+    const offcanvasBackdrop = document.querySelector(".offcanvas-backdrop");
+
+    if (offcanvas) {
+      // Remove ARIA and role attributes (optional)
+      offcanvas.removeAttribute("aria-modal");
+      offcanvas.removeAttribute("role");
+
+      // Hide offcanvas
+      offcanvas.classList.remove("show");
+
+      // Remove backdrop if it exists
+      if (offcanvasBackdrop) offcanvasBackdrop.remove();
+
+      // Restore body scroll
+      body.style.overflow = "";
+      body.style.paddingRight = "";
+    }
+  });
+});
+// document.querySelectorAll('.offcanvas a[href^="#"]').forEach(link => {
+//   link.addEventListener("click", () => {
+//     const offcanvasEl = document.querySelector(".offcanvas.show");
+//     if (offcanvasEl) {
+//       // Trigger the Bootstrap hide event
+//       offcanvasEl.dispatchEvent(new Event("hide.bs.offcanvas", { bubbles: true }));
+
+//       // Optional: scroll to section manually
+//       const target = document.querySelector(link.getAttribute("href"));
+//       if (target) target.scrollIntoView({ behavior: "smooth" });
+//     }
+//   });
+// });

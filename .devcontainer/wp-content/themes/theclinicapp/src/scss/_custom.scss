@@ -21,6 +21,10 @@
   --input: oklch(100% 0 0deg / 15%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
   @extend .text-grey-600;
@@ -128,7 +132,11 @@ h1 {
   right: 20px;
   bottom: -20px;
 }
-
+@media (prefers-reduced-motion: reduce) {
+  .offcanvas {
+    transition: transform 0.6s ease-in-out !important;
+  }
+}
 .api_logos {
   .wp-caption-text {
     font-size: 1rem;
@@ -292,6 +300,11 @@ h1 {
   }
   .carousel-desc {
     font-size: 1.35rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-item {
+    transition: transform 0.6s ease-in-out !important;
   }
 }
 

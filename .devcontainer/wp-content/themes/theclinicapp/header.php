@@ -27,7 +27,7 @@ $icon_url = get_site_icon_url(32);
 
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
   <title><?php wp_title('|', true, 'right'); ?></title>
   <?php wp_head(); ?>
