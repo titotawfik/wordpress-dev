@@ -16,6 +16,8 @@
   --slate-900: #0f172b;
   --light-blue: #eef2ff;
   --dark-blue-950: #0d1941;
+  --black: #000;
+  --white: #fff;
   --bs-nav-link-color: #4a5565;
   --bs-card-title-color: #4a5565;
   --input: oklch(100% 0 0deg / 15%);
@@ -312,7 +314,6 @@ h1 {
 body.dark-theme {
   color: #fcf9fa;
   background-color: #020618;
-
   .header {
     border-color: var(--grey-900);
   }
@@ -320,8 +321,11 @@ body.dark-theme {
   .features-section {
     background-color: color-mix(in oklab, var(--grey-900) 90%, transparent) !important;
   }
-  .header *:not(.nav .dropdown-item) {
+  .header *:not(.nav .dropdown-item, .btn-success, .btn-secondary) {
     color: var(--slate-300);
+  }
+  .btn.toggle-mob{
+    border-color: var(--slate-300);
   }
   .btn-primary {
     color: var(--grey-900) !important;
@@ -355,7 +359,7 @@ body.dark-theme {
   }
   .appointment-section,
   .bg-grey-200 {
-    background-color: var(--dark-blue-950);
+    background-color: var(--black);
   }
 
   .bg-teal--gradient {
@@ -375,6 +379,11 @@ body.dark-theme {
   }
   .post__link:hover {
     color: var(--slate-300);
+  }
+
+  .carousel-dark {
+    --bs-carousel-indicator-active-bg: #fcf9fa;
+    --bs-carousel-caption-color: #fcf9fa;
   }
 }
 
@@ -546,6 +555,20 @@ label {
     height: 100% !important;
   }
 }
+
+@media (max-width: 767px) {
+  .offcanvas .dropdown-menu {
+    transition: all 0.3s ease;
+    width: 100%;
+    li {
+      border-bottom: 1px solid var(--grey-200);
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
 
 /* If the dropdown on hover instead on click */
 
