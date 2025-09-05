@@ -6,7 +6,7 @@ $media = $forth_features['media_file'];
 if ($forth_features):
 ?>
     <!-- Features forth block the Billing & Analytics section -->
-    <section class="billing-section bg-teal--gradient min-vh-100 d-flex align-items-center py-5 fade-on-scroll" id="billing">
+    <section class="billing-section bg-teal--gradient d-flex align-items-center py-5 fade-on-scroll" id="billing">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Content Section -->

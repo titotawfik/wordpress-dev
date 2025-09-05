@@ -16,7 +16,7 @@ $args = array(
 $hero_query = new WP_Query($args);
 
 if ($hero_query->have_posts()) : ?>
-    <div id="heroCarousel" class="carousel carousel-dark slide py-3" data-bs-ride="carousel" data-bs-interval="5000">
+    <div id="heroCarousel" class="carousel slide py-5 px-4 text-white bg-grey-600 rounded shadow-sm" data-bs-ride="carousel" data-bs-interval="5000">
 
         <!-- Indicators -->
         <div class="carousel-indicators">

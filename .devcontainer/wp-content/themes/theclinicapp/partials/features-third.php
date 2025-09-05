@@ -5,7 +5,7 @@ $media = $third_features['media_file'];
 if ($third_features):
 ?>
     <!-- Features third block the patient recored section -->
-    <section class="patient-recored-section min-vh-100 d-flex align-items-center py-5 fade-on-scroll" id="patient-recored">
+    <section class="patient-recored-section d-flex align-items-center py-5 fade-on-scroll" id="patient-recored">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Content Section -->

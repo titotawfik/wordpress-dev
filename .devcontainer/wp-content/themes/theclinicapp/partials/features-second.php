@@ -6,7 +6,7 @@ $media = $secondary_feature['media_file'];
 if ($secondary_feature):
 ?>
     <!-- Features Second block the Appointment section -->
-    <section class="appointment-section bg-light-blue min-vh-100 d-flex align-items-center py-5 fade-on-scroll" id="getstarted">
+    <section class="appointment-section bg-light-blue py-5 d-flex align-items-center py-5 fade-on-scroll" id="getstarted">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Content Section -->

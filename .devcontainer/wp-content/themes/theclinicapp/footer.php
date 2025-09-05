@@ -32,7 +32,7 @@
                 <div class="col-md-4 mb-4">
                     <ul class="footer-social-links list-unstyled d-flex text-gray-400 float-md-end">
                         <li><a href="https://www.youtube.com/@TheClinicApp" target="_blank" title="Visit our youtube" class="text-gray-400 me-3"><i class="fab fa-youtube fa-xl" aria-hidden="true"></i></a></li>
-                        <li><a href="#" title="Visit X" class="text-gray-400 me-3"><i class="fab fa-x fa-xl" aria-hidden="true"></i></a></li>
+                        <!-- <li><a href="#" title="Visit X" class="text-gray-400 me-3"><i class="fab fa-x fa-xl" aria-hidden="true"></i></a></li> -->
                     </ul>
                 </div>
             </div>

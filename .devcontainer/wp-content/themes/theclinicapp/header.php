@@ -61,10 +61,13 @@ $icon_url = get_site_icon_url(32);
         ));
         ?>
       </nav>
-      <div class="gap-2 d-sm-flex">
-        <button class="border-0 switch-theme-btn" type="button" title="switch theme" id="theme-toggle"></button>
-        <a href="https://app.theclinicapp.com/" target="_blank" class="btn btn-secondary me-md-2 d-none d-sm-flex">login</a>
-        <a href="#signup" class="btn btn-success btn-lg">Start now</a>
+      <div class="btn-group d-sm-flex">
+        <button class="switch-theme-btn" type="button" title="switch theme" id="theme-toggle"></button>
+        <a href="https://app.theclinicapp.com/" target="_blank" class="btn btn-secondary me-sm-2">
+          <span class="btn-login pe-1">Login</span>
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+        </a>
+        <a href="#signup" class="btn btn-success btn-signup">Start Now</a>
       </div>
       <!-- Mobile Menu Toggle -->
       <button title="toggle menu" class="btn toggle-mob d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
