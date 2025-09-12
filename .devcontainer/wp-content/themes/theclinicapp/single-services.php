@@ -1,6 +1,6 @@
 <?php get_header(); ?>
         
-        <main class="main features-template">
+        <main class="main services-template">
             <section class="row">
                 <div class="col-lg-12">
                      <?php if ( have_posts() ) : ?>

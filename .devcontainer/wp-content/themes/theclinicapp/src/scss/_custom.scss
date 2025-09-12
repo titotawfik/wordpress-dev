@@ -1,5 +1,6 @@
 :root {
   --bs-container-lg-size: 1536px;
+  --bs-container-md-size: 758px;
   --bs-primary: oklch(21% 0.042 265.755deg);
   --bs-secondary: #e2e8f0;
   --font-family: sans-serif, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -115,10 +116,10 @@ h1 {
 }
 
 .switch-theme-btn {
-  background-color: transparent;
+  background: transparent;
   height: 42px;
   width: 50px;
-  border: 1px solid transparent;
+  border: 1px solid transparent; 
 }
 
 .btn.toggle-mob,
@@ -143,6 +144,7 @@ h1 {
 .api_logos {
   p:first-child{
     margin-bottom: 0;
+    width: 100%;
   }
   .wp-caption-text {
     font-size: 1rem;
@@ -538,12 +540,20 @@ label {
   }
 }
 
+
 /* Responsive design */
 @media (min-width: 1600px) {
   .container {
     max-width: var(--bs-container-lg-size);
   }
 }
+
+@include media-breakpoint-only(md) { 
+  .container {
+    max-width: var(--bs-container-md-size);
+  }
+}
+
 @media (max-width: 465px) {
   .site-title {
     font-size: 1rem !important;

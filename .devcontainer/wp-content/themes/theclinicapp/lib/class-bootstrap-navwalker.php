@@ -93,16 +93,16 @@ class Bootstrap_Navwalker extends Walker_Nav_Menu
                 $menu_title = '';
             }
 
-            if (strpos($menu_title, 'feature') !== false) {
-                $img = get_template_directory_uri() . '/assets/images/features.jpg';
-            } elseif (strpos($menu_title, 'service') !== false) {
-                $img = get_template_directory_uri() . '/assets/images/services.jpg';
+            if (strpos($menu_title, 'features') !== false) {
+                $img = get_template_directory_uri() . '/assets/images/FeaturesMenu.webp';
+            } elseif (strpos($menu_title, 'services') !== false) {
+                $img = get_template_directory_uri() . '/assets/images/ServicesMenu.webp';
             } else {
-                $img = get_template_directory_uri() . '/assets/images/default.jpg';
+                $img = get_template_directory_uri() . '/assets/images/GenericMenu.webp';
             }
 
             // Append image column right inside the row
-            $output .= '<div class="col-md-6 img-content order-md-2"><img src="' . esc_url($img) . '" class="img-fluid" alt=""></div>';
+            $output .= '<div class="col-md-6 img-content order-md-2"><img src="' . esc_url($img) . '" class="img-fluid" alt="menu-image"></div>';
             $output .= '<div class="col-md-6 order-md-1">';
         } else {
             $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
