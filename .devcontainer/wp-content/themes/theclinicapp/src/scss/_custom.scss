@@ -572,6 +572,10 @@ label {
   .site-title {
     display: none;
   }
+  .dropdown-item {
+    font-size: 0.9rem;
+    text-wrap: auto;
+  }
 }
 
 @media (max-width: 429px) {
@@ -611,22 +615,30 @@ label {
   }
 }
 
-@include media-breakpoint-up(md) { 
+@include media-breakpoint-up(md) {
+  .dropdown {
+    position: unset;
+  }
   .mega-menu {
-    width: 768px;
-  }
-  .mega-menu .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .mega-menu li {
-    width: 50%; /* splits into 2 columns */
-    list-style: none;
-  }
-  .mega-menu .img-content {
-    text-align: right;
+    width: 737px;
+    transform: translate3d(0px, 0px, 0px) !important;
+    inset: 60px auto auto 11px !important;
+    box-shadow: 2px 8px 14px rgb(0 0 0 / 22%);
   }
 }
+@include media-breakpoint-up(lg) { 
+  .mega-menu {
+    width: 939px;
+  }
+}
+@include media-breakpoint-up(xl) { 
+  .mega-menu {
+    width: 1119px;
+  }
+}
+
+
+
 
 /* If the dropdown on hover instead on click */
 

@@ -42,7 +42,7 @@ $icon_url = get_site_icon_url(32);
 
   <!-- Site Header -->
   <header class="header sticky-top bg-white py-3">
-    <div class="container d-flex align-items-center justify-content-between">
+    <div class="container d-flex align-items-center justify-content-between position-relative">
       <!-- Logo (Text) -->
       <a href="<?php echo home_url(); ?>" class="navbar-brand d-flex align-items-center text-decoration-none">
         <span><?php if ($icon_url) {
