@@ -108,6 +108,51 @@ document.querySelectorAll('.offcanvas a[href^="#"]').forEach(link => {
   });
 });
 
+// attach to all internal anchors
+document.querySelectorAll('a[href*="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const rawHref = this.getAttribute('href');
+    if (!rawHref) return;
+
+    const hashIndex = rawHref.indexOf('#');
+    if (hashIndex === -1) return;
+    const hash = rawHref.substring(hashIndex);
+
+    const target = document.querySelector(hash);
+    if (!target) return;
+
+    //e.preventDefault(); // stop default jump
+
+    const header = document.querySelector('.header') || document.querySelector('header');
+    let headerOffset = header ? header.getBoundingClientRect().height : 0;
+
+    if (this.classList.contains('cta-btn')) {
+      headerOffset += 0;
+    }
+
+    // accessibility: focus without scrolling
+   // target.setAttribute('tabindex', '-1');
+    //target.focus({ preventScroll: true });
+
+    // scroll after a small delay to account for fade-in animation
+    setTimeout(() => {
+      const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }, 1200); // adjust 1.2s to match your fade duration
+
+    // update URL hash without native jump
+    if (history.replaceState) {
+      history.replaceState(null, '', hash);
+    } else {
+      location.hash = hash;
+    }
+  });
+});
+
+
+
 
 
 // YouTube Iframe API for autoplaying and looping videos when in view

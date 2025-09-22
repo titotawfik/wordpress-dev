@@ -637,7 +637,11 @@ label {
   }
 }
 
-
+// Accessibility: focus styles
+//This removes the gray highlight/focus ring on tap for iOS.
+// a, button, [tabindex] {
+//   -webkit-tap-highlight-color: transparent;
+// }
 
 
 /* If the dropdown on hover instead on click */
