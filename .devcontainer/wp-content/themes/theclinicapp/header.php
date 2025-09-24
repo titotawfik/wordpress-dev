@@ -46,7 +46,7 @@ $icon_url = get_site_icon_url(32);
       <!-- Logo (Text) -->
       <a href="<?php echo home_url(); ?>" class="navbar-brand d-flex align-items-center text-decoration-none">
         <span><?php if ($icon_url) {
-                echo '<img src="' . esc_url($icon_url) . '" alt="Site Icon" widhth="32" height="32" class="me-1">';
+                echo '<img src="' . esc_url($icon_url) . '" alt="TheClinicApp logo" widhth="32" height="32" class="me-1">';
               } ?></span><span class="site-title fs-5 fw-bold"><?php bloginfo('name'); ?></span>
       </a>
 
@@ -63,7 +63,7 @@ $icon_url = get_site_icon_url(32);
       </nav>
       <div class="btn-group d-sm-flex">
         <button class="switch-theme-btn" type="button" title="switch theme" id="theme-toggle"></button>
-        <a href="https://app.theclinicapp.com/" target="_blank" class="btn btn-secondary me-sm-2">
+        <a href="https://app.theclinicapp.com/" target="_blank" class="btn btn-primary me-sm-2">
           <span class="btn-login pe-1">Login</span>
           <i class="fa fa-sign-in" aria-hidden="true"></i>
         </a>

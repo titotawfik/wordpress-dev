@@ -30,6 +30,7 @@ function theclinicapp_enqueue_assets()
 }
 add_action('wp_enqueue_scripts', 'theclinicapp_enqueue_assets');
 /** ========================================================================================================================================  */
+// Register Navigation Menus
 function register_site_menus()
 {
 	register_nav_menus(
@@ -40,6 +41,30 @@ function register_site_menus()
 	);
 }
 add_action('init', 'register_site_menus');
+/** ============================================================================================================================================= */
+// Register Footer Widgets
+function mytheme_footer_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Footer 1', 'theclinicapp' ),
+        'id'            => 'footer-1',
+        'description'   => __( 'Footer widget area 1', 'theclinicapp' ),
+        'before_widget' => '<div id="%1$s" class="widget text-white %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h6 class="widget-title text-white fw-bold">',
+        'after_title'   => '</h6>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer 2', 'theclinicapp' ),
+        'id'            => 'footer-2',
+        'description'   => __( 'Footer widget area 2', 'theclinicapp' ),
+        'before_widget' => '<div id="%1$s" class="widget text-white %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h6 class="widget-title text-white fw-bold">',
+        'after_title'   => '</h6>',
+    ) );
+}
+add_action( 'widgets_init', 'mytheme_footer_widgets_init' );
 /** ============================================================================================================================================= */
 // DISABLE USER REST API CALL
 function disable_rest_endpoints($endpoints)

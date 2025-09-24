@@ -4,7 +4,7 @@
 
 
 <!-- Form Section Signup-->
-<section class="form-section text-center" >
+<section class="form-section bg-grey-600 text-center" >
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 mb-4">
