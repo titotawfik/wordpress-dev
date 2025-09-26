@@ -36,35 +36,55 @@ function register_site_menus()
 	register_nav_menus(
 		array(
 			'header-menu' => __('Header Menu'),
-			'footer-menu' => __('Footer Menu')
+			'footer-menu' => __('Footer Menu'), 
+			'services-menu' => __('Services Menu'),
+			'features-menu' => __('Features Menu')
 		)
 	);
 }
 add_action('init', 'register_site_menus');
 /** ============================================================================================================================================= */
 // Register Footer Widgets
-function mytheme_footer_widgets_init() {
+function theclinicapp_footer_widgets_init() {
     register_sidebar( array(
         'name'          => __( 'Footer 1', 'theclinicapp' ),
         'id'            => 'footer-1',
         'description'   => __( 'Footer widget area 1', 'theclinicapp' ),
-        'before_widget' => '<div id="%1$s" class="widget text-white %2$s">',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h6 class="widget-title text-white fw-bold">',
+        'before_title'  => '<h6 class="widget-title fw-bold">',
         'after_title'   => '</h6>',
     ) );
-
     register_sidebar( array(
         'name'          => __( 'Footer 2', 'theclinicapp' ),
         'id'            => 'footer-2',
         'description'   => __( 'Footer widget area 2', 'theclinicapp' ),
-        'before_widget' => '<div id="%1$s" class="widget text-white %2$s">',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h6 class="widget-title text-white fw-bold">',
+        'before_title'  => '<h6 class="widget-title fw-bold">',
         'after_title'   => '</h6>',
     ) );
+	register_sidebar( array(
+        'name'          => __( 'Footer 3', 'theclinicapp' ),
+        'id'            => 'footer-3',
+        'description'   => __( 'Footer widget area 3', 'theclinicapp' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h6 class="widget-title fw-bold">',
+        'after_title'   => '</h6>',
+    ) );
+	register_sidebar( array(
+	'name'          => __( 'Footer 4', 'theclinicapp' ),
+	'id'            => 'footer-4',
+	'description'   => __( 'Footer widget area 4', 'theclinicapp' ),
+	'before_widget' => '<div id="%1$s" class="widget text-white %2$s">',
+	'after_widget'  => '</div>',
+	'before_title'  => '<h6 class="widget-title text-white fw-bold">',
+	'after_title'   => '</h6>',
+) );
 }
-add_action( 'widgets_init', 'mytheme_footer_widgets_init' );
+add_action( 'widgets_init', 'theclinicapp_footer_widgets_init' );
+
 /** ============================================================================================================================================= */
 // DISABLE USER REST API CALL
 function disable_rest_endpoints($endpoints)
