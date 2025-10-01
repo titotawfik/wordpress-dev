@@ -543,14 +543,14 @@ label {
 //   border-color: #ebccd1;
 //   border-radius: 4px;
 // }
-
+.min-dvh-100 {
+  min-height: 100dvh !important;
+  min-height: -webkit-fill-available;
+}
 .border-top-grey {
   border-top: 1px solid #6c6a6a;
 }
 
-.footer-bottom-container {
-  //@extend .border-top-grey;
-}
 .footer-container {
   font-size: 0.9rem;
 }

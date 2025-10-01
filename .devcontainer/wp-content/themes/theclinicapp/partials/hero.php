@@ -5,7 +5,7 @@ $media = $hero['media_file'];
 if ($hero):
 ?>
     <!-- Hero Section -->
-    <section class="min-vh-100 d-flex align-items-center hero-section bg-grey-200" id="hero-section">
+    <section class="py-3 py-lg-5 d-flex align-items-center hero-section bg-grey-200" id="hero-section">
         <div class="container">
             <div class="row">
                 <?php if (!empty($hero['title'])): ?>

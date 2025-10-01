@@ -63,17 +63,17 @@
                 <div class="col-md-4 mb-4">
                     <p class="mb-0 text-grey-100">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-6 mb-4">
                 <?php
 
                 wp_nav_menu(array(
                     'theme_location' => 'footer-menu',
                     'container'      => false,
-                    'menu_class'     => 'footer-links d-flex justify-content-evenly',
+                    'menu_class'     => 'list-unstyled footer-links d-flex justify-content-between',
                 ));
                 ?>
             </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-2 mb-4">
                     <ul class="footer-social-links list-unstyled d-flex text-grey-100 float-md-end">
                         <li><a href="https://www.youtube.com/@TheClinicApp" target="_blank" title="Visit our youtube" class="text-grey-100 me-3"><i class="fab fa-youtube fa-xl" aria-hidden="true"></i></a></li>
                         <!-- <li><a href="#" title="Visit X" class="text-gray-400 me-3"><i class="fab fa-x fa-xl" aria-hidden="true"></i></a></li> -->
